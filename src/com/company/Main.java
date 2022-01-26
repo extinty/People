@@ -1,8 +1,7 @@
 package com.company;
 
-import java.util.Arrays;
-
-import static com.company.Human.*;
+import static com.company.Human.ageSorting;
+import static com.company.Human.nameSorting;
 
 
 public class Main {
@@ -43,6 +42,7 @@ public class Main {
         System.out.println("Name is: " + human3.name + ", age is: " + human3.age + ", years to retirement is: " + human3.yearsToRetire);
 
  */
+
 
         // method-3 array encapsulated
         Human[] humans = Human.getHumans(5, 15,64);                     //получаем и выводим массив объектов класса Human с рандомными полями
