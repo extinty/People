@@ -3,6 +3,11 @@ package com.garage.vehicle;
 public class Stone implements Vehicle {
 
     @Override
+    public String getModel() {
+        return "Stone";
+    }
+
+    @Override
     public void start() {
         System.out.println("I can't");
     }
