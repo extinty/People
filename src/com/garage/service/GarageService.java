@@ -1,5 +1,6 @@
 package com.garage.service;
 
+import com.garage.vehicle.SportCar;
 import com.garage.vehicle.Stone;
 import com.garage.vehicle.Vehicle;
 
@@ -8,19 +9,20 @@ import java.util.Arrays;
 public class GarageService {
     private Vehicle[] vehicles = new Vehicle[0];
     private Stone[] stones = new Stone[0];
+    private SportCar[] sportCars = new SportCar[0];
 
     /**
      * create a new array to copy all existing vehicles and add a new one to {@link #vehicles}
      */
-    public void registerVehicle(Vehicle vehicle) {
-        Vehicle[] vehicles = new Vehicle[this.vehicles.length + 1];
+    public void registerVehicle(Vehicle vehicleTemp) {
+        Vehicle[] vehiclesCount = new Vehicle[this.vehicles.length + 1];
 
         for (int i = 0; i < this.vehicles.length; i++) {
-            vehicles[i] = this.vehicles[i];
+            vehiclesCount[i] = this.vehicles[i];
         }
-        vehicles[this.vehicles.length] = vehicle;
+        vehiclesCount[this.vehicles.length] = vehicleTemp;
 
-        this.vehicles = vehicles;
+        this.vehicles = vehiclesCount;
     }
 
     /**
@@ -106,5 +108,30 @@ public class GarageService {
         }
     }
 
+    public void registerSportCars(SportCar sportcar){
+        registerVehicle(sportcar);
 
+        SportCar[] sportCars = new SportCar[this.sportCars.length + 1];
+
+        for (int i = 0; i < this.sportCars.length; i++) {
+            sportCars[i] = this.sportCars[i];
+        }
+        sportCars[this.sportCars.length] = sportcar;
+
+        this.sportCars = sportCars;
+    }
+
+    public SportCar[] getSportCars () {
+        if (this.sportCars.length == 0) {
+            return null;
+        } else {
+            SportCar[] sportCars = new SportCar[this.sportCars.length];
+            for (int i = 0; i < this.sportCars.length; i++) {
+                sportCars[i] = this.sportCars[i];
+            }
+            return sportCars;
+        }
+
+
+    }
 }

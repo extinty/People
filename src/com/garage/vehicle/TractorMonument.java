@@ -7,5 +7,9 @@ public class TractorMonument extends Stone {
         return 50000;
     }
 
+    @Override
+    public String getModel() {
+        return "TractorMonument";
+    }
 
 }

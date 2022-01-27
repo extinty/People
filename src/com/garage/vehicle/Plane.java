@@ -4,13 +4,18 @@ public class Plane implements Vehicle {
 
 
     @Override
+    public String getModel() {
+        return "Plane";
+    }
+
+    @Override
     public void start() {
-        System.out.println("Bzzzzz");
+        System.out.println("Plane is starting");
     }
 
     @Override
     public void stop() {
-        System.out.println("pssssss");
+        System.out.println("Plane is stopping");
     }
 
     @Override

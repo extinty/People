@@ -2,6 +2,7 @@ package com.garage.vehicle;
 
 public interface Vehicle {
 
+    String getModel();
 
     void start();
 
